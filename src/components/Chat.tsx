@@ -36,7 +36,7 @@ export default function Chat() {
         {messages.map((m, i) => (
           <MessageView key={i} message={m} />
         ))}
-        {loading && <p>NPC is thinking...</p>}
+        {loading && <p>They stare at you silently...</p>}
       </div>
 
       <input
