@@ -7,6 +7,8 @@ export default function MessageView({
 }) {
 
   const isUser = message.role === "user";
+  
+
 
   return (
     <div className={`flex w-full my-2 ${isUser ? "justify-end" : "justify-start"}`}>
@@ -21,12 +23,14 @@ export default function MessageView({
           border-2
           ${
             isUser
-              ? "bg-blue-500 border-blue-900 text-white"
-              : "bg-purple-500 border-purple-900 text-white"
+              ? "bg-teal-950 text-teal-200"
+              : "bg-purple-950 text-purple-200"
           }
         `}
       >
-      <strong>{message.role}:</strong> {message.text}
+      <span className={`flex justify-center ${isUser ? "bg-teal-300 text-teal-950 rounded-sm w-14" : "bg-purple-200 text-purple-950 rounded-sm w-10"}`}>
+        <strong>{message.role}:</strong> 
+        </span>{message.text}
       </div>
       
     </div>
