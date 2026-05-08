@@ -2,6 +2,8 @@ import { useState } from "react";
 import { getNPCResponse } from "../lib/gemini";
 import type { Message } from "../types/index.ts";
 import MessageView from "./Message.tsx";
+import './Chat.css';
+import Logo from "../characters/Logo.tsx";
 
 export default function Chat() {
   const [messages, setMessages] = useState<Message[]>([]);
@@ -32,20 +34,29 @@ export default function Chat() {
 
   return (
     <div>
-      <div>
+      <div className='chat-container flex flex-row bg-yellow-300 gap-3 p-1'>
+        <Logo/>
+
+        <div className='messages-container'>
+
+       
         {messages.map((m, i) => (
           <MessageView key={i} message={m} />
         ))}
         {loading && <p>They stare at you silently...</p>}
       </div>
+       </div>
 
       <input
+      className='w-3/4 rounded-md mt-5 border-2 border-green-300 bg-gray-950 p-1 text-sm text-blue-200'
         value={input}
         onChange={(e) => setInput(e.target.value)}
         placeholder="Talk to NPC..."
       />
 
-      <button onClick={sendMessage}>Send</button>
+      <button
+      className='bg-none text-white font-mono mx-5' 
+      onClick={sendMessage}>Send</button>
     </div>
   );
 }
