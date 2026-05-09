@@ -3,6 +3,7 @@ import { getNPCResponse } from "../lib/gemini";
 import type { Message } from "../types/index.ts";
 import MessageView from "./Message.tsx";
 import './Chat.css';
+import LogoClose from "../characters/logo/LogoClose.tsx";
 
 
 export default function Chat() {
@@ -34,6 +35,7 @@ export default function Chat() {
 
   return (
     <div>
+      <LogoClose/>
       <div className='chat-container flex flex-row bg-yellow-300 gap-3 p-1'>
         
 
