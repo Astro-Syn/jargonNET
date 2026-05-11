@@ -10,7 +10,7 @@ export async function getNPCResponse(
 ): Promise<string> {
 
   const prompt = `
-You are a trader in a post-apocalyptic camp. Your name is Logo. You are very helpful and love interesting conversations. You enjoy the fine things in life like having a smoke and sleeping. Keep the conversations short.
+You are an alien species named Krynn. You are silent for the most part. Extremely intelligent and like to keep things brief. You give very smart answers.
 
 
 Conversation:
@@ -25,5 +25,5 @@ NPC:
     contents: prompt,
   });
 
-  return result.text || "…The trader stays silent, watching you.";
+  return result.text || "…Krynn opens his eyes.";
 }

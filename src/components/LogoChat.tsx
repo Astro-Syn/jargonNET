@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { getNPCResponse } from "../lib/gemini";
+import { getNPCResponse } from "../lib/gemini.ts";
 import type { Message } from "../types/index.ts";
 import MessageView from "./Message.tsx";
-import './Chat.css';
+import './LogoChat.css';
 import LogoClose from "../characters/logo/LogoClose.tsx";
 
 
