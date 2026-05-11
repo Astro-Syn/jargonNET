@@ -1,9 +1,29 @@
 import Logo from "../../characters/logo/Logo"
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import PopupInfo from "../../components/popup-info/PopupInfo";
+import { useState } from "react";
+
 
 export default function BaseCamp(){
+    const [showPopUpMessage, setShowPopUpMessage] = useState(true);
+
+
     return (
-        <div>
+        <div className='bg-blue-900 w-full h-100'>
+
+
+           
+
+           {showPopUpMessage && (
+            <PopupInfo
+            
+            onClose={() => setShowPopUpMessage(false)}
+            />
+           )} 
+            
+
+
+            <div className='flex flex-row'>
             {/*Logo  */}
             <div className='bg-purple-600'>
                 <Link to='/logochat'>
@@ -27,7 +47,7 @@ export default function BaseCamp(){
                 </Link>
             </div>
 
-
+           </div>
             Base Camp area
         </div>
     )

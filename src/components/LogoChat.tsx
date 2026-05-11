@@ -34,8 +34,13 @@ export default function Chat() {
   };
 
   return (
-    <div>
-      <LogoClose/>
+    <div className='w-full h-full flex flex-col justify-center items-center mt-10'>
+
+      <div className='flex flex-row justify-between w-full px-10'>
+    <LogoClose/>
+    <span>placeholder</span>
+      </div>
+      
       <div className='chat-container flex flex-row bg-yellow-300 gap-3 p-1'>
         
 
@@ -49,6 +54,7 @@ export default function Chat() {
       </div>
        </div>
 
+<div className='flex flex-row w-full'>
       <input
       className='w-3/4 rounded-md mt-5 border-2 border-green-300 bg-gray-950 p-1 text-sm text-blue-200'
         value={input}
@@ -59,6 +65,7 @@ export default function Chat() {
       <button
       className='bg-none text-white font-mono mx-5' 
       onClick={sendMessage}>Send</button>
+    </div>
     </div>
   );
 }
