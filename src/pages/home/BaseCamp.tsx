@@ -14,15 +14,17 @@ export default function BaseCamp(){
 
             {/*Krynn */}
             <div className='bg-red-200'>
-                <Link to='/krynnchat'/>
+                <Link to='/krynnchat'>
                 Krynn
+                </Link>
             </div>
 
             {/*Rue */}
             <div className='bg-yellow-100'>
 
-            <Link to='/ruechat'/>
+            <Link to='/ruechat'>
                 Rue
+                </Link>
             </div>
 
 
