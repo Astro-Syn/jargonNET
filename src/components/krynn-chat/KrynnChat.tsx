@@ -2,6 +2,8 @@ import { useState } from "react";
 import { getNPCResponse } from "../../lib/gemini3";
 import type { Message } from "../../types";
 import MessageView from "../Message.tsx";
+import KrynnClose from "../../characters/krynn/KrynnClose.tsx";
+import { Link } from "react-router-dom";
 
 export default function KrynnChat(){
     const [messages, setMessages] = useState<Message[]>([]);
@@ -31,7 +33,7 @@ export default function KrynnChat(){
     }
     return (
          <div>
-              <LogoClose/>
+              <KrynnClose/>
               <div className='chat-container flex flex-row bg-yellow-300 gap-3 p-1'>
                 
         
@@ -55,6 +57,7 @@ export default function KrynnChat(){
               <button
               className='bg-none text-white font-mono mx-5' 
               onClick={sendMessage}>Send</button>
+              <Link to='/'>Back to Camp</Link>
             </div>
     )
 }

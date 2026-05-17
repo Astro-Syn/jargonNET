@@ -4,6 +4,7 @@ import type { Message } from "../types/index.ts";
 import MessageView from "./Message.tsx";
 import './LogoChat.css';
 import LogoClose from "../characters/logo/LogoClose.tsx";
+import { Link } from "react-router-dom";
 
 
 export default function Chat() {
@@ -66,6 +67,7 @@ export default function Chat() {
       className='bg-none text-white font-mono mx-5' 
       onClick={sendMessage}>Send</button>
     </div>
+    <Link to='/'>Back to Camp</Link>
     </div>
   );
 }

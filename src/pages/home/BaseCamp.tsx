@@ -2,7 +2,7 @@ import Logo from "../../characters/logo/Logo"
 import { Link } from "react-router-dom";
 import PopupInfo from "../../components/popup-info/PopupInfo";
 import { useState } from "react";
-
+import Krynn from "../../characters/krynn/Krynn";
 
 export default function BaseCamp(){
     const [showPopUpMessage, setShowPopUpMessage] = useState(true);
@@ -35,7 +35,7 @@ export default function BaseCamp(){
             {/*Krynn */}
             <div className='bg-red-200'>
                 <Link to='/krynnchat'>
-                Krynn
+                <Krynn />
                 </Link>
             </div>
 
